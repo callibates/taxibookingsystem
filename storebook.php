@@ -15,7 +15,7 @@ $ctime = $_POST['ctime'];
 $timedate = "";
 $timedate = $timedate . $time;
 $datetime = $_POST['datetime'];
-//$newtime = $_POST['thetime'];
+$newtime = $_POST['thetime'];
 //$nicedate = $_POST['nicedate'];
 //echo ("|$datetime|");
 //$datetime = substr($datetime, 0, 16);
@@ -41,5 +41,5 @@ mysqli_free_result($result);
 mysqli_close($conn);
 
 // write back the password concatenated to end of the name
-ECHO ("Thank you! Your booking reference number is: $num. You will be picked up in front of your provided address on $pudate at $datetime.");
+ECHO ("Thank you! Your booking reference number is: $num. You will be picked up in front of your provided address on $pudate at $newtime.");
 ?>
