@@ -1,6 +1,6 @@
 <?php
 // get name and password passed from client
-$num = $_POST['num'];
+//$num = $_POST['num'];
 $name = $_POST['name'];
 $phone = $_POST['phone'];
 $address = $_POST['address'];
@@ -16,6 +16,11 @@ $timedate = "";
 $timedate = $timedate . $time;
 $datetime = $_POST['datetime'];
 $newtime = $_POST['thetime'];
+
+$bignum = hexdec( substr(sha1("test"), 0, 15) );
+$smallernum = $bignum % 999999999;
+$num = $smallernum;
+
 //$nicedate = $_POST['nicedate'];
 //echo ("|$datetime|");
 //$datetime = substr($datetime, 0, 16);
