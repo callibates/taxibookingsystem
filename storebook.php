@@ -8,7 +8,7 @@ $sub = $_POST['sub'];
 $dest = $_POST['dest'];
 $pudate = $_POST['pudate'];
 $date = $_POST['date'];
-$status = $_POST['status'];
+$status = "unassigned";
 $time = $_POST['putime'];
 $ctime = $_POST['ctime'];
 
