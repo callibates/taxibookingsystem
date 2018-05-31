@@ -26,13 +26,14 @@
             <a class="nav-link" id="item1" href="booking.php">Book</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" id="item1" href="admin.html">Admin</a>
+            <a class="nav-link" id="item2" href="admin.html">Admin</a>
         </li>
     </ul>
 </nav>
-<div class="container">
+<div class="container mydiv">
     </br></br>
     <h3>Book a Taxi!</h3>
+    <div class="mydiv">
     <form id="myForm" onsubmit="addBook('storebook.php'); return false;"> <!--When the submit button is clicked...-->
             <div class="form-group">
             </br>
@@ -81,11 +82,13 @@
             ?>
             <input type="time" class="form-control" id="putime" name="putime" required = "required" value=<?php echo $datey2; ?>>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-        <button type="reset" class="btn btn-primary">Reset</button>
-    </form>
-    <div id="screwyouhtml">
+        <button type="submit" class="btn btn-special">Submit</button>
+        <button type="reset" class="btn btn-special">Reset</button>
+    </br>
+        </br>
+        </br>
 
+    </form>
     </div>
 </div>
 </body>

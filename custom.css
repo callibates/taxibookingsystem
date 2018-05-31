@@ -10,11 +10,12 @@
 }
 .navbar-custom {
     background-color: rgba(41, 41, 41, 0.95);
+    font-family: Chalkduster, fantasy;
 }
 .navbar-default {
     background: #000000;
 }
-#item1{
+#item1, #item2{
     padding-top: 30px;
     color: goldenrod;
     font-size: 1.4em;
@@ -22,4 +23,11 @@
 
 .btn-special{
     background-color: rgba(17, 17, 17, 0.87);
+    color: ghostwhite;
+    font-family: Chalkduster, fantasy;
+}
+
+.mydiv{
+    color: #111111;
+    font-family: Chalkduster, fantasy;
 }

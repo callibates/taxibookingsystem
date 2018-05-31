@@ -25,17 +25,32 @@ function addBook(dataSource) {
 
             var status = "unassigned";
             var date = new Date().toISOString();
+            var date2 = new Date();
+            var mon = date2.getMonth()+1;
+            var day = date2.getDate();
+            if(mon.toString().length == 1){
+                mon = "0"+mon;
+            }
+            if(day.toString().length == 1){
+                day = "0"+day;
+            }
+            var date3 = date2.getFullYear()+"-"+mon+"-"+day;
             var ctime = new Date();
-            var cctime = ctime.getHours() + ":" + ctime.getMinutes() + ":00";
+            var min = ctime.getMinutes();
+            var hour = ctime.getHours();
+            if(min.toString().length == 1){
+                min = "0"+min;
+            }
+            if(hour.toString().length == 1){
+                hour = "0"+hour;
+            }
+            var cctime = hour + ":" + min + ":00";
             var booknum = Math.floor(Math.random() * 1000);
             var datetime = pudate + " " + putime;
             var requestbody = "num=" + booknum + " &name=" + encodeURIComponent(name) + " &phone=" + encodeURIComponent(phone) + " &address=" + encodeURIComponent(address) + " &sub=" + encodeURIComponent(suburb) + " &dest=" + encodeURIComponent(destsub) + " &pudate=" + encodeURIComponent(pudate) + " &datetime=" + encodeURIComponent(datetime) + "&date=" + encodeURIComponent(date) + " &ctime=" + encodeURIComponent(cctime) + " &status=" + encodeURIComponent(status) + " &thetime=" + encodeURIComponent(putime);
 
-            if(datetime < date){
-                alert("Please put a date and time that is after now.");
-                console.log("date"+date+" datetime"+datetime);
-            }else {
-                console.log("date"+date+" datetime"+datetime);
+            if(pudate > date3){
+                console.log("pudate"+pudate+" date3"+date3);
 
                 xhr.open("POST", dataSource, true);
                 xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
@@ -48,6 +63,36 @@ function addBook(dataSource) {
                 } // end anonymous call-back function
                 xhr.send(requestbody);
                 document.getElementById('myForm').reset();
+
+            }else {
+                console.log("putime"+putime+" cctime"+cctime);
+                if(pudate == date3){
+                    if(putime < cctime){
+                        alert("Please put a date and time that is after now.");
+                    }else{
+                        console.log("pudate"+pudate+" date3"+date3);
+
+                        xhr.open("POST", dataSource, true);
+                        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+                        xhr.onreadystatechange = function () {
+                            // alert(xhr.readyState); // to let us see the state of the computation
+                            if (xhr.readyState == 4 && xhr.status == 200) {
+                                alert(xhr.responseText);
+                            } // end if
+                        } // end anonymous call-back function
+                        xhr.send(requestbody);
+                        document.getElementById('myForm').reset();
+
+                    }
+                }else{
+                    // console.log(datetime == date);
+                    // console.log(datetime < date);
+                    alert("Please put a date and time that is after now.");
+                    // console.log("date"+date);
+                    // console.log(" datetime"+datetime);
+                }
+
             }
 
         } // end if
