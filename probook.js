@@ -16,8 +16,12 @@ function addBook(dataSource) {
         var putime = document.getElementById('putime').value;
 
         var name = fname + " " + lname;
-
-            var address = unitnum + "/" + stnum + " " + stnam;
+        var address = "";
+        if(unitnum == ""){
+            address = stnum + " " + stnam;
+        }else {
+            address = unitnum + "/" + stnum + " " + stnam;
+        }
 
             var status = "unassigned";
             var date = new Date().toISOString();
@@ -28,11 +32,13 @@ function addBook(dataSource) {
             var datetime = pudate + " " + putime;
             var requestbody = "num=" + booknum + " &name=" + encodeURIComponent(name) + " &phone=" + encodeURIComponent(phone) + " &address=" + encodeURIComponent(address) + " &sub=" + encodeURIComponent(suburb) + " &dest=" + encodeURIComponent(destsub) + " &pudate=" + encodeURIComponent(pudate) + " &datetime=" + encodeURIComponent(datetime) + "&date=" + encodeURIComponent(date) + " &ctime=" + encodeURIComponent(cctime) + " &status=" + encodeURIComponent(status) + " &thetime=" + encodeURIComponent(putime);
 
-            if(pudate < date){
-                alert("Please put a date that is not before today's date.");
+            if(datetime < date){
+                alert("Please put a date and time that is after now.");
+                console.log("date"+date+" datetime"+datetime);
             }else {
                 console.log("DATE = " + pudate);
-                console.log("TIME = " + datetime + "|");
+                console.log("TIME = " + datetime);
+                console.log("date"+date+" datetime"+datetime);
 
                 xhr.open("POST", dataSource, true);
                 xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");

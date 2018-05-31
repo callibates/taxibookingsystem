@@ -29,43 +29,45 @@
     </br></br>
     <h3>Book a Taxi!</h3>
     <form id="myForm" onsubmit="addBook('storebook.php'); return false;"> <!--When the submit button is clicked...-->
-        <!--form action="processbooking.js" method="get"><!--When the submit button is clicked...-->
             <div class="form-group">
             </br>
             <label for="fname">First Name</label>
-            <input type="fname" class="form-control" id="fname" name="fname" required="required" >
+            <input type="fname" class="form-control" id="fname" name="fname" required="required" value="John" >
         </div>
         <div class="form-group">
             <label for="lname">Last Name</label>
-            <input type="lname" class="form-control" id="lname" name="lname" required="required" >
+            <input type="lname" class="form-control" id="lname" name="lname" required="required" value = "Smith">
         </div>
         <div class="form-group">
             <label for="phone">Contact Phone</label>
-            <input type="phone" class="form-control" id="phone" name="phone" required="required"  placeholder="Numbers only please" >
+            <input type="phone" class="form-control" id="phone" name="phone" required="required" value=022022022><!--could make dropdown-->
         </div>
         <div class="form-group">
             <label for="unitnum">Unit Number</label>
-            <input type="number" class="form-control" id="unitnum" name="unitnum"  placeholder="Numbers only please" >
+            <input type="number" class="form-control" id="unitnum" name="unitnum" value = "">
         </div>
         <div class="form-group">
             <label for="streetnum">Street Number</label>
-            <input type="number" class="form-control" id="streetnum" name="streetnum" required = "required"  placeholder="Numbers only please" >
+            <input type="number" class="form-control" id="streetnum" name="streetnum" required = "required" value = 123>
         </div>
         <div class="form-group">
             <label for="streetname">Street Name</label>
-            <input type="string" class="form-control" id="streetname" name="streetname" required = "required">
+            <input type="string" class="form-control" id="streetname" name="streetname" required = "required" value = "Sesame Street">
         </div>
         <div class="form-group">
             <label for="suburb">Suburb</label>
-            <input type="string" class="form-control" id="suburb" name="suburb" required = "required">
+            <input type="string" class="form-control" id="suburb" name="suburb" required = "required" value="Auckland">
         </div>
         <div class="form-group">
             <label for="destsuburb">Destination Suburb</label>
-            <input type="string" class="form-control" id="destsuburb" name="destsuburb" required = "required">
+            <input type="string" class="form-control" id="destsuburb" name="destsuburb" required = "required" value = "Auckland">
         </div>
         <div class="form-group">
             <label for="pudate">Pick-Up Date</label>
-            <input type="date" class="form-control" id="pudate" name="pudate" required = "required">
+            <?php
+            $date = date("Y-m-d");
+            ?>
+            <input type="date" class="form-control" id="pudate" name="pudate" required = "required" value = <?php echo $date; ?>>
         </div>
         <div class="form-group">
             <label for="putime">Pick-Up Time</label>
