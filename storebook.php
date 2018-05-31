@@ -7,18 +7,22 @@ $address = $_POST['address'];
 $sub = $_POST['sub'];
 $dest = $_POST['dest'];
 $pudate = $_POST['pudate'];
-$date = $_POST['date'];
+//$date = $_POST['date'];
 $status = "unassigned";
 $time = $_POST['putime'];
-$ctime = $_POST['ctime'];
+//$ctime = $_POST['ctime'];
 
 $timedate = "";
 $timedate = $timedate . $time;
 $datetime = $_POST['datetime'];
 $newtime = $_POST['thetime'];
 
-$bignum = hexdec( substr(sha1("test"), 0, 15) );
-$smallernum = $bignum % 999999999;
+$date = date("Y-m-d");
+$ctime = date("H:i:sa");
+$rand = rand(1,10000000);
+
+$bignum = hexdec( substr(md5($rand), 0, 15) );
+$smallernum = substr($bignum, 0, 8);
 $num = $smallernum;
 
 //$nicedate = $_POST['nicedate'];
