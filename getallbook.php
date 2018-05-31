@@ -21,7 +21,7 @@ if(!$result){
         ECHO("<h4>There are no currently unassigned bookings</h4>");
     } else {
         ECHO("<h5><strong>The following bookings are unassigned:</strong></h5>");
-        ECHO("<table border=\"1\">");
+        ECHO("<table border=\"1\" class='mytable'>");
         ECHO("<tr>\n"
             . "<th scope=\"col\">Number</th>\n"
             . "<th scope=\"col\">Name</th>\n"

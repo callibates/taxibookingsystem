@@ -30,23 +30,23 @@
         </li>
     </ul>
 </nav>
-<div class="container mydiv">
+<div class="container mydiv col-lg-6">
     </br></br>
-    <h3><strong>Welcome to CabsOnline! Fill in your information below.</strong></h3>
+    <h3 align="center"><strong>Welcome to CabsOnline! </br> Fill in your information below.</strong></h3>
     <div class="mydiv">
     <form id="myForm" onsubmit="addBook('storebook.php'); return false;"> <!--When the submit button is clicked...-->
             <div class="form-group">
             </br>
             <label for="fname">First Name</label>
-            <input type="fname" class="form-control" id="fname" name="fname" required="required" value="John" >
+            <input type="text" class="form-control" id="fname" name="fname" required="required">
         </div>
         <div class="form-group">
             <label for="lname">Last Name</label>
-            <input type="lname" class="form-control" id="lname" name="lname" required="required" value = "Smith">
+            <input type="text" class="form-control" id="lname" name="lname" required="required">
         </div>
         <div class="form-group">
             <label for="phone">Contact Phone</label>
-            <input type="phone" class="form-control" id="phone" name="phone" required="required" value=022022022><!--could make dropdown-->
+            <input type="number" class="form-control" id="phone" name="phone" required="required"><!--could make dropdown-->
         </div>
         <div class="form-group">
             <label for="unitnum">Unit Number</label>
@@ -54,19 +54,19 @@
         </div>
         <div class="form-group">
             <label for="streetnum">Street Number</label>
-            <input type="number" class="form-control" id="streetnum" name="streetnum" required = "required" value = 123>
+            <input type="number" class="form-control" id="streetnum" name="streetnum" required = "required">
         </div>
         <div class="form-group">
             <label for="streetname">Street Name</label>
-            <input type="string" class="form-control" id="streetname" name="streetname" required = "required" value = "Sesame Street">
+            <input type="text" class="form-control" id="streetname" name="streetname" required = "required">
         </div>
         <div class="form-group">
             <label for="suburb">Suburb</label>
-            <input type="string" class="form-control" id="suburb" name="suburb" required = "required" value="Auckland">
+            <input type="text" class="form-control" id="suburb" name="suburb" required = "required">
         </div>
         <div class="form-group">
             <label for="destsuburb">Destination Suburb</label>
-            <input type="string" class="form-control" id="destsuburb" name="destsuburb" required = "required" value = "Auckland">
+            <input type="text" class="form-control" id="destsuburb" name="destsuburb" required = "required">
         </div>
         <div class="form-group">
             <label for="pudate">Pick-Up Date</label>

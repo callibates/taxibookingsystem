@@ -39,3 +39,8 @@
     padding-bottom: 0;
     margin: 0;
 }
+
+.mytable{
+    background-color: rgba(17, 17, 17, 0.8);
+    color: goldenrod;
+}
