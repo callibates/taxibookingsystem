@@ -1,6 +1,8 @@
 .nav-item{
     text-align: center;
     color: aliceblue;
+    padding-top: 17px;
+    padding-bottom: 0px;
 }
 .img-responsive2 {
     height: auto;

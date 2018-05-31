@@ -102,7 +102,7 @@ function addBook(dataSource) {
         var xhr = createRequest();
         if (xhr) {
 
-            //var obj = document.getElementById('place');
+            var obj = document.getElementById('place');
 
             var num = document.getElementById('bnum').value;
 
@@ -115,6 +115,7 @@ function addBook(dataSource) {
                 if (xhr.readyState == 4 && xhr.status == 200) {
                     //obj.innerHTML = xhr.responseText;
                     alert(xhr.responseText);
+                    obj.innerHTML ="";
                 } // end if
             } // end anonymous call-back function
             xhr.send(requestbody);
