@@ -1,4 +1,7 @@
+
 <?php
+//ID: 15905324
+//This is the file for storing bookings
 // get name and password passed from client
 //$num = $_POST['num'];
 $name = $_POST['name'];
@@ -25,13 +28,9 @@ $bignum = hexdec( substr(md5($rand), 0, 15) );
 $smallernum = substr($bignum, 0, 8);
 $num = $smallernum;
 
-//$nicedate = $_POST['nicedate'];
-//echo ("|$datetime|");
-//$datetime = substr($datetime, 0, 16);
 
 if(isset($name)) {
-    require_once("../../conf/settings.php"); //please make sure the path is correct
-// complete your answer here
+    require_once("../../conf/settings.php");
 // ## 1. open the connection
 // Connect to mysql server
     $conn = @mysqli_connect($host, $user, $pswd, $dbnm)
@@ -49,6 +48,5 @@ mysqli_free_result($result);
 // ## 3. close the connection
 mysqli_close($conn);
 
-// write back the password concatenated to end of the name
 ECHO ("Thank you! Your booking reference number is: $num. You will be picked up in front of your provided address on $pudate at $newtime.");
 ?>

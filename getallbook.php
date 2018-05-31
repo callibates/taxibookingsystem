@@ -1,4 +1,8 @@
 <?php
+//ID: 15905324
+/*
+ * This class contains the server side code which queries the SQL database for all unassigned statuses within the next 2 hours
+ */
 require_once("../../conf/settings.php"); //please make sure the path is correct
 // complete your answer here
 // ## 1. open the connection

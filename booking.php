@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<!--ID: 15905324-->
+<!--This file is the UI for the booking page where customers can enter in their information and make a booking-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,13 +15,12 @@
     <title>Book</title>
 </head>
 <body>
-<!--nav class="navbar navbar-expand-sm bg-secondary navbar-dark"-->
 <nav class="navbar navbar-expand-sm navbar-custom">
     <ul class="navbar-nav">
         <li class="nav-item">
             <h2 class="navbar-brand brand-name">
                 <a href="index.html"><img class="img-responsive2"
-                                          src="images/taxi.png"></a>
+                                          src="taxi.png"></a>
             </h2>
         </li>
         <li class="nav-item">

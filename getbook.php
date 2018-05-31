@@ -1,4 +1,8 @@
 <?php
+//ID: 15905324
+/*
+ * This class contains the php code which queries the SQL database for a certain booking number to assign
+ */
 $num = $_POST['num'];
 
 if(isset($num)) {
@@ -15,13 +19,18 @@ if(isset($num)) {
     $query = "SELECT booknum FROM requests WHERE booknum = $num";
     $result = mysqli_query($conn, $query);
 
-
-    if(!$result){
-        ECHO("There was an error retrieving this information from the database.");
+    $rowcount = mysqli_num_rows($result);
+    if($rowcount <=0){
+        ECHO("There are no bookings under that ID currently.");
     }else{
-        $query2 = "UPDATE requests SET status= 'assigned' WHERE booknum = $num";
-        $result = mysqli_query($conn, $query2);
-        ECHO("The booking request $num has been properly assigned.");
+        if(!$result){
+            ECHO("There was an error retrieving this information from the database.");
+        }else{
+            $query2 = "UPDATE requests SET status= 'assigned' WHERE booknum = $num";
+            $result = mysqli_query($conn, $query2);
+            $rowcount = mysqli_num_rows($result);
+            ECHO("The booking request $num has been properly assigned.");
+        }
     }
 
     // Frees up the memory, after using the result pointer

@@ -1,1 +1,4 @@
+ID: 15905324
+THIS IS THE SQL COMMAND USED TO CREATE THE TABLE:
+
 CREATE TABLE requests(booknum int, custname varchar(20), phone varchar(20), address varchar(20), suburb varchar(20), destination varchar(20), pickupdate datetime, currdate date, currtime time, status varchar(20), primary key(booknum));
