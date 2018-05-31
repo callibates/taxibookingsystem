@@ -28,7 +28,6 @@ function addBook(dataSource) {
             var ctime = new Date();
             var cctime = ctime.getHours() + ":" + ctime.getMinutes() + ":00";
             var booknum = Math.floor(Math.random() * 1000);
-          //  var nicedate = new Date(pudate).toDateString();
             var datetime = pudate + " " + putime;
             var requestbody = "num=" + booknum + " &name=" + encodeURIComponent(name) + " &phone=" + encodeURIComponent(phone) + " &address=" + encodeURIComponent(address) + " &sub=" + encodeURIComponent(suburb) + " &dest=" + encodeURIComponent(destsub) + " &pudate=" + encodeURIComponent(pudate) + " &datetime=" + encodeURIComponent(datetime) + "&date=" + encodeURIComponent(date) + " &ctime=" + encodeURIComponent(cctime) + " &status=" + encodeURIComponent(status) + " &thetime=" + encodeURIComponent(putime);
 
@@ -36,8 +35,6 @@ function addBook(dataSource) {
                 alert("Please put a date and time that is after now.");
                 console.log("date"+date+" datetime"+datetime);
             }else {
-                console.log("DATE = " + pudate);
-                console.log("TIME = " + datetime);
                 console.log("date"+date+" datetime"+datetime);
 
                 xhr.open("POST", dataSource, true);

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="custom.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -12,16 +13,20 @@
     <title>Book</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-sm bg-secondary navbar-dark">
+<!--nav class="navbar navbar-expand-sm bg-secondary navbar-dark"-->
+<nav class="navbar navbar-expand-sm navbar-custom">
     <ul class="navbar-nav">
         <li class="nav-item">
-            <a class="navbar-brand" href="index.html">Index</a>
+            <h2 class="navbar-brand brand-name">
+                <a href="index.html"><img class="img-responsive2"
+                                          src="images/taxi.png"></a>
+            </h2>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="booking.php">Make A Booking</a>
+            <a class="nav-link" id="item1" href="booking.php">Book</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="admin.html">Admin</a>
+            <a class="nav-link" id="item1" href="admin.html">Admin</a>
         </li>
     </ul>
 </nav>

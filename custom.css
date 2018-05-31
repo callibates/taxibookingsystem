@@ -1,0 +1,25 @@
+.nav-item{
+    text-align: center;
+    color: aliceblue;
+}
+.img-responsive2 {
+    height: auto;
+    width: auto;
+    max-height: 72px;
+    max-width: 250px;
+}
+.navbar-custom {
+    background-color: rgba(41, 41, 41, 0.95);
+}
+.navbar-default {
+    background: #000000;
+}
+#item1{
+    padding-top: 30px;
+    color: goldenrod;
+    font-size: 1.4em;
+}
+
+.btn-special{
+    background-color: rgba(17, 17, 17, 0.87);
+}
