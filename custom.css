@@ -1,5 +1,4 @@
 .nav-item{
-    text-align: center;
     color: aliceblue;
     padding-top: 17px;
     padding-bottom: 0px;
@@ -12,13 +11,14 @@
 }
 .navbar-custom {
     background-color: rgba(41, 41, 41, 0.95);
-    font-family: Chalkduster, fantasy;
+    font-family: Georgia, serif;
+    font-weight: bold;
 }
 .navbar-default {
     background: #000000;
 }
-#item1, #item2{
-    padding-top: 30px;
+#item1, #item2, #item3{
+    padding-top: 10px;
     color: goldenrod;
     font-size: 1.4em;
 }
@@ -26,10 +26,16 @@
 .btn-special{
     background-color: rgba(17, 17, 17, 0.87);
     color: ghostwhite;
-    font-family: Chalkduster, fantasy;
+    font-family: Georgia, serif;
 }
 
 .mydiv{
     color: #111111;
-    font-family: Chalkduster, fantasy;
+    font-family: Georgia, serif;
+}
+
+.mybrand{
+    color: aliceblue;
+    padding-bottom: 0;
+    margin: 0;
 }

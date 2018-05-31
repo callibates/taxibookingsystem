@@ -20,7 +20,7 @@ if(!$result){
     if ($rowcount == 0) {
         ECHO("<h4>There are no currently unassigned bookings</h4>");
     } else {
-        ECHO("<h4>Unassigned bookings </h4>");
+        ECHO("<h5><strong>The following bookings are unassigned:</strong></h5>");
         ECHO("<table border=\"1\">");
         ECHO("<tr>\n"
             . "<th scope=\"col\">Number</th>\n"

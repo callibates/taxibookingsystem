@@ -32,7 +32,7 @@
 </nav>
 <div class="container mydiv">
     </br></br>
-    <h3>Book a Taxi!</h3>
+    <h3><strong>Welcome to CabsOnline! Fill in your information below.</strong></h3>
     <div class="mydiv">
     <form id="myForm" onsubmit="addBook('storebook.php'); return false;"> <!--When the submit button is clicked...-->
             <div class="form-group">
